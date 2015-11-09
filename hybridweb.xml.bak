@@ -15,6 +15,7 @@
 		</AGATEWEBVIEW>
 	</WINDOW>
 
+	<!--го╢э -->
 	<BUTTON id="bottomBtn" layout="620,1136,90,84" defaultImg="res/browser_ico_full.png" onClick="" visible="invisible"/>
 	<STYLEBUTTON id="webBottomWindow" layout="0,1150,720,80" align="linear:horizontal|hJustify|center" overlay1="gradation:tb|#f4f4f4|#e3e3e3" enabled="false">
 		<BUTTON id="backBtn" layout="70,70" defaultImg="res/tab_prev.png" onClick="function.goBack" margin="30,0,0,0"/>
