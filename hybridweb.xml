@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-	Created by PSD
-	open the Hybridweb.
--->
+
 <MOML>
 
 <UILAYOUT portrait="720,1230" landscape="720,1230">
@@ -15,12 +12,9 @@
 		</AGATEWEBVIEW>
 	</WINDOW>
 
-	<BUTTON id="bottomBtn" layout="620,1136,90,84" defaultImg="res/browser_ico_full.png" onClick="" visible="invisible"/>
 	<STYLEBUTTON id="webBottomWindow" layout="0,1150,720,80" align="linear:horizontal|hJustify|center" overlay1="gradation:tb|#f4f4f4|#e3e3e3" enabled="false">
 		<BUTTON id="backBtn" layout="70,70" defaultImg="res/tab_prev.png" onClick="function.goBack" margin="30,0,0,0"/>
 		<BUTTON id="fowardBtn" layout="70,70" defaultImg="res/tab_next.png" onClick="function.goForward" />
-		<BUTTON layout="70,70" defaultImg="res/tab_home.png" onClick="device.toastPopup('첫 페이지로이동'), webView.src='1030.g2i.co.kr/'" />
-		<BUTTON layout="70,70" defaultImg="res/tab_reload.png" onClick="device.toastPopup('새로고침'),webView.refresh()" />
 		<LABEL layout="1,70" defaultImg="#d3d4d5"/>
 		<BUTTON layout="70,70" defaultImg="res/browser_bottom_ico_full.png" margin="0,0,15,0" onClick="function.webBottomVisible"/>
 	</STYLEBUTTON>
