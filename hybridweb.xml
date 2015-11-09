@@ -7,18 +7,11 @@
 		<AGATEWEBVIEW id="webView" layout="0,0,720,1150" src="http://1030.g2i.co.kr/" supportZoom="false" controls="none" defaultImg="#ffffff">
 			<LINKMAP>
 				<LINK url="http://*" delay="1"/>
-				<LINK url="http://*" onFinish="function.prevForwardCheck"/>
+				<LINK url="http://*" onFinish=""/>
 			</LINKMAP>
 		</AGATEWEBVIEW>
 	</WINDOW>
 </UILAYOUT>
-
-<CMD cmd="function.prevForwardCheck" delay="100" />
-
-<FUNCTION id="prevForwardCheck">
-	<CMD condition="webView.canBack() == 'true'" cmd="backBtn.defaultImg= 'res/tab_prev.png'" elseCmd="backBtn.defaultImg = 'res/tab_prev_on.png'"/>
-	<CMD condition="webView.canForward() == 'true'" cmd="fowardBtn.defaultImg= 'res/tab_next.png'" elseCmd="fowardBtn.defaultImg = 'res/tab_next_on.png'"/>
-</FUNCTION>
 
 </MOML>
 
