@@ -6,18 +6,18 @@
 	<WINDOW id="mainWindow" layout="0,0,720,1150" align="relative">
 		<AGATEWEBVIEW id="webView" layout="0,0,720,1150" src="http://1030.g2i.co.kr/" supportZoom="false" controls="none" defaultImg="#ffffff">
 			<LINKMAP>
-				<LINK url="http://*" delay="1"/>
-				<LINK url="http://*" onFinish="function.prevForwardCheck"/>
+				<LINK url="http://*" delay="100"/>
+				<LINK url="*" onFinish="function.prevForwardCheck"/>
 			</LINKMAP>
 		</AGATEWEBVIEW>
 	</WINDOW>
 
-	<STYLEBUTTON id="webBottomWindow" layout="0,1150,720,80" align="linear:horizontal|hJustify|center" overlay1="gradation:tb|#f4f4f4|#e3e3e3" enabled="false">
-		<BUTTON id="backBtn" layout="70,70" defaultImg="res/tab_prev.png" onClick="function.goBack" margin="30,0,0,0"/>
-		<BUTTON id="fowardBtn" layout="70,70" defaultImg="res/tab_next.png" onClick="function.goForward" />
-		<BUTTON layout="70,70" defaultImg="res/tab_home.png" onClick="device.toastPopup('move to first page'), webView.src = 'http://1030.g2i.co.kr/'" />
-		<BUTTON layout="70,70" defaultImg="res/tab_reload.png" onClick="device.toastPopup('refresh'), webView.refresh()" />
-	</STYLEBUTTON>
+	<WINDOW id="toolbar" layout="0,1150,720,80" align="linear:horizontal|vCenter" defaultImg="/res/webbg.png">
+		<BUTTON id="backBtn" layout="70,70" defaultImg="res/tab_prev.png" onClick="webView.back" margin="30,0,0,0"/>
+		<BUTTON id="fowardBtn" layout="70,70" defaultImg="res/tab_next.png" onClick="webView.forward" />
+		<BUTTON layout="70,70" defaultImg="res/tab_home.png" onClick="webView.src = 'http://1030.g2i.co.kr/'" />
+		<BUTTON layout="70,70" defaultImg="res/tab_reload.png" onClick="webView.refresh" />
+	</WINDOW>
 </UILAYOUT>
 
 <CMD cmd="function.prevForwardCheck" delay="100" />
@@ -25,14 +25,6 @@
 <FUNCTION id="prevForwardCheck">
 	<CMD condition="webView.canBack() == 'true'" cmd="backBtn.defaultImg= 'res/tab_prev.png'" elseCmd="backBtn.defaultImg = 'res/tab_prev_on.png'"/>
 	<CMD condition="webView.canForward() == 'true'" cmd="fowardBtn.defaultImg= 'res/tab_next.png'" elseCmd="fowardBtn.defaultImg = 'res/tab_next_on.png'"/>
-</FUNCTION>
-
-<FUNCTION id="goBack">
-	<CMD condition="webView.canBack() == 'true'" cmd="webView.back" elseCmd="device.toastPopup('first page.')" />
-</FUNCTION>
-
-<FUNCTION id="goForward">
-	<CMD condition="webView.canForward() == 'true'" cmd="webView.forward" elseCmd="device.toastPopup('no next page.')" />
 </FUNCTION>
 
 </MOML>
