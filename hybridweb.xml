@@ -13,7 +13,7 @@
 	</WINDOW>
 
 	<WINDOW id="toolbar" layout="0,1150,720,80" align="linear:horizontal|hJustify|center" defaultImg="/res/webbg.png">
-		<BUTTON id="backBtn" layout="70,70" defaultImg="res/tab_prev.png" onClick="webView.back" margin="30,0,0,0"/>
+		<BUTTON id="backBtn" layout="70,70" defaultImg="res/tab_prev.png" onClick="webView.back" margin="60,0,0,0"/>
 		<BUTTON id="fowardBtn" layout="70,70" defaultImg="res/tab_next.png" onClick="webView.forward" />
 		<BUTTON layout="70,70" defaultImg="res/tab_home.png" onClick="webView.src = 'http://1030.g2i.co.kr/'" />
 		<BUTTON layout="70,70" defaultImg="res/tab_reload.png" onClick="webView.refresh" />
