@@ -28,11 +28,11 @@
 </FUNCTION>
 
 <FUNCTION id="goBack">
-	<CMD condition="webView.canBack() == 'true'" cmd="webView.back()" elseCmd="device.toastPopup('first page.')" />
+	<CMD condition="webView.canBack() == 'true'" cmd="webView.back" elseCmd="device.toastPopup('first page.')" />
 </FUNCTION>
 
 <FUNCTION id="goForward">
-	<CMD condition="webView.canForward() == 'true'" cmd="webView.forward()" elseCmd="device.toastPopup('no next page.')" />
+	<CMD condition="webView.canForward() == 'true'" cmd="webView.forward" elseCmd="device.toastPopup('no next page.')" />
 </FUNCTION>
 
 </MOML>
